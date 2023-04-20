@@ -5,8 +5,8 @@ fetch('/books.json')
     let tableData = "";
     objectData.map((values) => {
         tableData += `<tr>
-            <td>${values.author}</td>
             <td>${values.title}</td>
+            <td>${values.author}</td>
             <td>${values.year}</td>
             <td>${values.language}</td>
             <td>

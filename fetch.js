@@ -1,18 +1,16 @@
-// Calling of Fetch Api to fetch data from JSON
-
-fetch('books.json')
-.then((data) => data.json()) //Json
-.then((objectData) => { //Data as Objects
-    // console.table(objectData[0].author);
+fetch('/books.json')
+.then((data) => data.json())
+.then((objectData) => {
+    console.table(objectData[0].author);
     let tableData = "";
     objectData.map((values) => {
-        tableData += `<tr id="tablerows">
-            <td>${values.title}</td>
+        tableData += `<tr>
             <td>${values.author}</td>
+            <td>${values.title}</td>
             <td>${values.year}</td>
             <td>${values.language}</td>
             <td>
-                <a href=${values.link}>Know More</a>
+                <a href=${values.link}>Wikipedia</a>
             </td>
       </tr>`
     })

@@ -1,4 +1,4 @@
-fetch('/books.json')
+fetch('books.json')
 .then((data) => data.json())
 .then((objectData) => {
     console.table(objectData[0].author);

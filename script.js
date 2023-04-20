@@ -1,5 +1,3 @@
-alert("I am linked")
-
 fetch('books.json')
 .then((data) => data.json())
 .then((objectData) => {
